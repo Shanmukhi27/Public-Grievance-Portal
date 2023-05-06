@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="CSS/login.css">
+    <script>
+        function myfunction() {
+			// const emailInput = document.getElementById("email").value;
+			// const regex = /^[a-zA-Z0-9_.+-]+@gmail\.com$/;
+			// if (regex.test(emailInput)) {
+				
+			// } else {
+			// 	alert("Invalid email address!");
+                
+			// }
+            const phno= document.getElementById("phno").value;
+            if(phno.length===10){}
+            else{
+                alert("Invalid phone number!");
+            }
+
+            const aadhar= document.getElementById("aadhar").value;
+            if(aadhar.length===12){}
+            else{
+                alert("Invalid aadhar number!");
+            }
+
+		}
+    </script>
+
+<script>
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const phnoInput = document.getElementById('phno');
+    const aadharInput = document.getElementById('aadhar');
+    const localityInput = document.getElementById('locality');
+    const distInput = document.getElementById('dist');
+    const stateInput = document.getElementById('state');
+    
+    const submitButton = document.getElementById('submit');
+    
+    function checkInputs() {
+        if (nameInput.value && emailInput.value && passwordInput.value && nphnoInput.value && aadharInput.value &&  localityInput.value &&  distInput .value && stateInput.value &&      submitButton.value) {
+            submitButton.disabled = false;
+        } else {
+            submitButton.disabled = true;
+        }
+    }
+    
+    nameInput.addEventListener('input', checkInputs);
+    emailInput.addEventListener('input', checkInputs);
+    passwordInput.addEventListener('input', checkInputs);
+    phnoInput.addEventListener('input', checkInputs);
+    aadharInput.addEventListener('input', checkInputs);
+    localityInput.addEventListener('input', checkInputs);
+    distInput .addEventListener('input', checkInputs);
+    stateInput.addEventListener('input', checkInputs);
+    submitButton.addEventListener('input', checkInputs);
+</script>
+</head>
+<body>
+    <body>
+        <header>
+            <h1>Public Grievance Portal</h1>
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/complog.html">Sign In</a></li>
+                <li><a href="/login.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    <div class="container">
+        <h1>Citizen SignUp</h1>
+        <form class="form" action="/" method="post">
+            <div class="form-box">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="phno">Mobile:</label>
+                    <input  id="phno" name="phno" type="number" placeholder="Enter your mobile number" required>
+                </div>
+                <div class="input-group">
+                    <label for="aadhar">Aadhar:</label>
+                    <input id="aadhar" type="number" name="aadhar" placeholder="Enter your Aadhar number" required>
+                </div>
+                <div class="input-group">
+                    <label for="sublocality">Sublocality:</label>
+                    <input id="locality" type="text" name="sublocality" placeholder="Enter your locality" required>
+                </div>
+            </div>
+            <div class="form-box">
+                <div class="input-group">
+                    <label for="dist">District:</label>
+                    <input id="dist" name="dist" type="text" placeholder="Enter your district" required>
+                </div>
+                <div class="input-group">
+                    <label for="state">State:</label>
+                    <input id="state" type="text" name="state" placeholder="Enter your state" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input  id="email" name="email" type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input id="pass" name="password" type="password"  placeholder="Enter your password" required>
+                </div>
+            </div>
+            <div class="input-group center">
+                <input id="submit" class="btn" onclick="myfunction()" type="submit" value="Signup">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

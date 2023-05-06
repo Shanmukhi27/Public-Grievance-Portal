@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/signin.css">
+</head>
+<body>
+
+    <body>
+        <header >
+            <h1>Public Grievance Portal</h1><br>
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/complog.html">Sign In</a></li>
+               <li><a href="/login.html">SignUp</a></li>
+            </ul>
+        </nav>
+    <div class="center">
+        <h1 style="margin-bottom: 20px;">Higher Authority Login</h1>
+    <form id="form" action="/highauth.html" method="post">
+
+        <div class="attr">
+            <label for="Department">Department:</label>
+            <select name="dept" id="dept" >
+              <option  value="pol">police</option>
+              <option  value="rev">revenue</option>
+              <option  value="mun">Municipality</option>
+              <option  value="women">Women Protection</option>
+            </select>
+          </div>
+
+        <div class="attr">
+            <label for="Id">Dept Id:</label><br>
+            <input id="pid" name="haid" type="number" placeholder="ID">
+        </div>
+       
+       
+
+       
+         <div>
+    
+            <button type="submit">check</button>
+         </div>
+        </form>
+    </div>
+</body>
+</html>

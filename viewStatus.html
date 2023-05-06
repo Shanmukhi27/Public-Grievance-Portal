@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* Global Styles */
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+nav {
+	background-color: #eee;
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav li {
+	margin-right: 10px;
+}
+
+nav a {
+	color: rgb(4, 4, 77);
+	text-decoration: none;
+	padding: 5px;
+}
+
+nav a:hover {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+}
+  
+  .center {
+    width: 30%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  }
+  .center h1{
+    text-align: center;
+    margin: 2px;
+  }
+  
+  .attr {
+    margin-bottom: 20px;
+  }
+  
+  .attr label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .attr input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color:rgb(4, 4, 77);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  .center  a{
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(4, 4, 77);
+    text-decoration: none;
+    transition: color 0.3s ease;
+   margin-left: 100px;
+  }
+  .center b{
+    margin-left: 20px;
+  }
+  
+  .center a:hover {
+    color: #555;
+  }
+    </style>
+</head>
+<body>
+
+    
+        <header>
+            <h1>Public Grievance Portal</h1>
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/complog.html">Sign In</a></li>
+               <li><a href="/login.html">SignUp</a></li>
+            </ul>
+        </nav>
+    <div class="center">
+        <form action="/viewStatus.html" method="post">
+            <!-- <div class="attr">
+                <label for="email">Email:</label>
+                <input name="email" type="email" placeholder="email">
+            </div>
+           <div class="attr">
+            <label for="password">Password:</label>
+            <input type="password" name="pass" placeholder="password">
+           </div> -->
+
+           <div class="attr">
+            <label for="regid">Registration Id:</label>
+            <input name="regid" type="number" placeholder="Registration Id">
+        </div>
+          
+          <button type="submit">View</button>
+  </form>
+    </div>
+   
+</body>
+</html>

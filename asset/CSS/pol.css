@@ -1,0 +1,22 @@
+#police {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #police td, #police th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #police tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #police tr:hover {background-color: #ddd;}
+  
+  #police th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1a0d49;
+    color: white;
+  }

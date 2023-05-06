@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pubcomp</title>
+    <link rel="stylesheet" href="CSS/signin.css">
+
+    <script>
+      function myFunction() {
+       //let name= document.getElementById("email").innerHTML;
+       alert("Your Complaint has received Successfully!!check viewstatus for further updates.")
+      }
+    </script>
+</head>
+<body>
+
+  
+    <header>
+        <h1>Public Grievance Portal</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/askquestion.html">Ask Question</a></li>
+            <li><a href="/complog.html">Sign In</a></li>
+           <li><a href="/login.html">SignUp</a></li>
+        </ul>
+    </nav>
+
+  <div class="center">
+<form action="/pubcomp.html" id="form" method="post">
+    <h1>Raise your  Problem!!</h1>
+   
+    <div class="attr">
+      <label for="pid">Register Id:</label>
+      <input id="pph" name="regid" type="number" placeholder="Registration Id">
+    </div>
+   
+
+   
+  <div class="attr">
+    <label for="Department">Choose Department</label>
+    <select name="dept" id="dept" >
+      <option  value="pol">police</option>
+      <option  value="rev">revenue</option>
+      <option  value="mun">Municipality</option>
+      <option  value="women">Women Protection</option>
+    </select>
+  </div>
+   
+   
+    
+  <div class="attr">
+    <label for="Comp">Complaint</label><br>
+    <textarea id="comp" name="comp" rows="15" cols="60" placeholder="Complaint"></textarea>
+  </div>
+   
+    <!-- <input id="ptext" name="comp" type="text" placeholder="complaint"><br> -->
+    <button type="submit" onclick="myFunction()">submit</button>
+
+
+   
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+nav {
+	background-color: #eee;
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav li {
+	margin-right: 10px;
+}
+
+nav a {
+	color: rgb(4, 4, 77);
+	text-decoration: none;
+	padding: 5px;
+}
+
+nav a:hover {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+}
+
+/* form{
+    width: 30%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+} */
+input[name=cid ]{
+    pointer-events: none;
+    border: none;
+  }
+
+  .one {
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  width: 550px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: scroll;
+  margin-left: 450px;
+  border: solid 5px rgb(4, 4, 77);
+  margin-bottom: 0;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content {
+  background-color: #c6eef8;
+  border-radius: 18px;
+  padding: 10px;
+  margin-right: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.timestamp {
+  font-size: small;
+  color: #474545;
+}
+
+
+p {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+input[type="text"] {
+  border: none;
+
+  padding: 10px;
+  /* margin-right: 10px; */
+ 
+  margin-left: 470px;
+  flex: 1;
+  background-color: #eee;
+  width: 30%;
+  margin-top: 10px;
+ 
+}
+
+button[type="submit"] {
+  border: none;
+  background-color: rgb(4, 4, 77);
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  margin-left: 2px;
+  
+  
+}
+
+
+</style>
+<script>
+  function myFunction() {
+   
+   alert("Sent message successfully refresh page once");
+  }
+</script>
+</head>
+<body>
+    <body>
+        <header>
+            <h1>Public Grievance Portal</h1>
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/complog.html">Sign In</a></li>
+               <li><a href="/login.html">SignUp</a></li>
+            </ul>
+        </nav>
+
+    <div>
+        
+        <form action="/chatpub.html" method="post">
+    <% if (sampleData && sampleData.length) { %>
+            <h5 >complaint id: <input name="cid"  placeholder="reg_id" size="2"  value= " <%= sampleData[0].c_id %>"></h5>
+            <div class="one">
+              <% if (Data && Data.length) { %>
+                <% for (var i = 0; i < Data.length; i++) { %>
+                  <div class="message-container">
+                    <div class="message">
+                      <p class="content"><%= Data[i].content %></p>
+                      <p class="timestamp"><%= Data[i].timestamp %></p>
+                    </div>
+                  </div>
+                <% } %>
+              <% } else { %>
+                <p>No data found.</p>
+              <% } %>
+     
+             <% } else { %>
+                <p>No data found.</p>
+                <% } %>  
+
+              
+
+        </div>
+        <div class="sec">
+      <input name="msg" type="text" placeholder="Type Something.........................................................">
+       <button onclick="myFunction()" type="submit">send</button>
+    </div>
+       </form>
+    </div>
+</body>
+</html>

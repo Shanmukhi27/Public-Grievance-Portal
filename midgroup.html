@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle Group</title>
+</head>
+<body>
+    <table id="tb1" class="table" border="0.3">
+        <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Department</th>
+            <th>Complaint</th>
+        </tr>
+         
+        <tr>
+            <td> <br><span id="pub-name"></span></td>
+            <td> <br><span id="pub-ph"></span></td>
+            <td><br><span id="pub-dept"></span></td>
+            <td><br><span id="pub-comp"></span></td>
+            <td>
+                <form  action="/db" method="post" >
+                    <input type="button" name="add" value="add Data" onclick="addToDB();" >
+                    <!-- " -->
+                </form>
+            </td>
+        </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+      
+       const name=localStorage.getItem('pub-name');
+        const phone=localStorage.getItem('pub-ph');
+        const compl=localStorage.getItem('pub-comp');
+        const dept=localStorage.getItem('pub-dept');
+       // console.log(name);
+
+         document.getElementById('pub-name').textContent=name;
+        document.getElementById('pub-ph').textContent=phone;
+         document.getElementById('pub-comp').textContent=compl;
+         document.getElementById('pub-dept').textContent=dept;
+
+        
+        function addToDB(){
+        console.log("hi");
+        }
+
+    
+    </script>
+
+    
+        
+
+       
+    
+  
+</body>
+</html>

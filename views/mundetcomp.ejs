@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction() {
+         let name= document.getElementById("id").innerHTML;
+         alert("Sent Notification successfully to"+name)
+        }
+
+        function myFunction1() {
+         
+         alert("Sent message successfully ")
+        }
+        function myFunction2() {
+         
+         alert("Updated successfully ")
+        }
+      </script>
+      <style>
+          body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+nav {
+	background-color: #eee;
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav li {
+	margin-right: 10px;
+}
+
+nav a {
+	color: rgb(4, 4, 77);
+	text-decoration: none;
+	padding: 5px;
+}
+
+nav a:hover {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+}
+
+/* form{
+    width: 30%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+} */
+input[name=cid ]{
+    pointer-events: none;
+    border: none;
+  }
+
+  /* .one{
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  width: 550px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: scroll;
+  margin-left: 450px;
+  border: solid 5px rgb(4, 4, 77);
+  margin-bottom: 0;
+  
+} */
+
+
+
+
+.one {
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  width: 550px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: scroll;
+  margin-left: 450px;
+  border: solid 5px rgb(4, 4, 77);
+  margin-bottom: 0;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content {
+  background-color: #c6eef8;
+  border-radius: 18px;
+  padding: 10px;
+  margin-right: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.timestamp {
+  font-size: small;
+  color: #474545;
+}
+
+
+
+
+
+p {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+input[type="text"] {
+  border: none;
+
+  padding: 10px;
+  /* margin-right: 10px; */
+ 
+  margin-left: 470px;
+  flex: 1;
+  background-color: #eee;
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+ 
+}
+
+button[type="submit"] {
+  border: none;
+  background-color: rgb(4, 4, 77);
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  margin-left: 2px;
+  
+  
+  
+}
+
+#police {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    /* margin-left: 400px; */
+    /* background-color: #cce4f6; */
+  }
+  
+  #police td, #police th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+ 
+  
+  
+
+  .bot{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+
+      </style>
+</head>
+<body>
+
+    <header >
+        <table>
+            <tr style="margin-left: 120px; ">
+                <td >
+                    <img style="margin-left: 450px;width: 100px;height: 100px;" src="/andhra logo-modified.png" alt="logo">
+                </td>
+                <td >
+                    <h1>Government of Andhra Pradesh</h1>
+                    <h1>Public Grievance Portal</h1>
+                </td>
+            </tr>
+        </table>
+       
+       
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/complog.html">Sign In</a></li>
+           <li><a href="/login.html">SignUp</a></li>
+        </ul>
+    </nav>
+    <form action="/muncipal" method="post">
+        <!-- <button style="margin-top: 15px;margin-left: 1300px;width: 100px;height: 40px;background-color: black;color:#fff;margin-top: 25px;" onclick="myFunction()">Notify</button> -->
+     <h1 style="text-align: center;"> Details of Complaint</h1>
+     <div>
+        <!-- <div class="info"> -->
+            <table   id="police">
+              <thead>
+                <th>Citizen Id</th>
+                <th>Citizen Name</th>
+                <th>Citizen Aadhar</th>
+                <th>Citizen phno</th>
+                <th>Complaint Id</th>
+                <th>Complaint</th>
+                <th>Complaint Date</th>
+                <th>Status</th>
+                <th>Finish Date</th>
+                <th>Update Status</th>
+                <th>Update Finish Date</th>
+                <th>Update</th>
+                
+              </thead>
+              <tbody>
+                <td id="id"><%= sampleData[0].public_id %></td>
+                <td><%= sampleData[0].public_name %></td>
+                <td><%= sampleData[0].public_aadhar %></td>
+                <td><%= sampleData[0].public_no %></td>
+                <td><input name="cid"  placeholder="com_id" size="2"  value= " <%= sampleData[0].c_id %>"></td>
+                <td><%= sampleData[0].complaint %></td>
+                <td><%= sampleData[0].comp_date %></td>
+                <td><%= sampleData[0].status %></td>
+                <td><%= sampleData[0].fin_date %></td>
+                <td> <select name="status" >
+                  <!-- <option value="null">status</option> -->
+                  <option  value="solved">solved</option>
+                  <option  value="inProgress">inprogress</option>
+                  <option  value="willBeStartedSoon">Will be started soon</option>
+               </select></td>
+               <td><input name="findate" type="date"></td>
+               <td><button onclick="myFunction2()" type="submit" >Update</button></td>
+
+              </tbody>
+                <!-- <tr>
+                    <td><p>public id</p></td>
+                    <td id="id"><%= sampleData[0].public_id %></td>
+                </tr>
+                <tr>
+                    <td><p>complaint id</p></td>
+                    <td><input name="cid"  placeholder="com_id" size="2"  value= " <%= sampleData[0].c_id %>"></td>
+                </tr>
+                <tr>
+                    <td>Complaint</td>
+                    <td><%= sampleData[0].complaint %></td>
+                </tr>
+                <tr>
+                    <td>Complaint Date</td>
+                    <td><%= sampleData[0].comp_date %></td>
+
+                </tr>
+                <tr>
+                    <td>Citizen Name</td>
+                    <td><%= sampleData[0].public_name %></td>
+                </tr>
+                <tr>
+                    <td>citizen Aadhar</td>
+                    <td><%= sampleData[0].public_aadhar %></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td><%= sampleData[0].status %></td>
+                </tr>
+                <tr>
+                    <td>Finish Date</td>
+                    <td><%= sampleData[0].fin_date %></td>
+                    
+                </tr> -->
+            </table>
+        <!-- </div> -->
+        <!-- <p>public id: <%= sampleData[0].public_id %></p>
+        <p>complaint id: <input name="cid"  placeholder="com_id" size="2"  value= " <%= sampleData[0].c_id %>"></p>
+        <p>Complaint : <%= sampleData[0].complaint %></p>
+        <p>Citizen Name: <%= sampleData[0].public_name %></p>
+        <p>citizen Aadhar: <%= sampleData[0].public_aadhar %></p>
+        <p>Status: <%= sampleData[0].status %> </p> -->
+        <!-- <div class="bot">
+            <p>Update Status: <select name="status" style="size: 20px;height: 30px;margin-top: 15px;margin-bottom: 15px;">
+                 <option value="null">status</option>
+                <option  value="solved">solved</option>
+                <option  value="inProgress">inprogress</option>
+                <option  value="willBeStartedSoon">Will be started soon</option>
+             </select>
+            </p>
+            <p>UpdateFinish Date:
+            <input name="findate" type="date">
+            </p>
+            <button onclick="myFunction2()" type="submit" style="width: 40%; margin-top: 15px;margin-bottom: 15px;">Update Status</button><br>
+          
+        </div> -->
+        
+     </div>
+    
+    </form>
+   
+    <!-- <div>
+        <form action="/chat.html" method="post">
+            <h5 >complaint id: <input name="cid"  placeholder="com_id" size="2"  value= " <%= sampleData[0].c_id %>"></h5>
+        <div class="one">
+            <% if (Data && Data.length) { %>
+                <% for (var i = 0; i < Data.length; i++) { %>
+                    <div style="display: flex;">
+                        <p ><%= Data[i].content %> </p>
+                        <p  style="font-size: small; color:#474545;margin-left: 40px;margin-top: 10px;"><%=   Data[i].timestamp %></p>
+                      </div>
+                <% } %>
+              <% } else { %>
+                <p>No data found.</p>
+              <% } %>
+              
+
+        </div> -->
+
+        <div>
+            <form action="/chat.html" method="post">
+              <h5>complaint id: <input name="cid" placeholder="com_id" size="2" value="<%= sampleData[0].c_id %>"></h5>
+              <div class="one">
+                <% if (Data && Data.length) { %>
+                  <% for (var i = 0; i < Data.length; i++) { %>
+                    <div class="message-container">
+                      <div class="message">
+                        <p class="content"><%= Data[i].content %></p>
+                        <p class="timestamp"><%= Data[i].timestamp %></p>
+                      </div>
+                    </div>
+                  <% } %>
+                <% } else { %>
+                  <p>No data found.</p>
+                <% } %>
+              </div>
+              
+           
+          
+        <div class="sec">
+            <input name="msg" type="text" placeholder="Type Something..................">
+            <button onclick="myFunction1()" type="submit">send</button>
+        </div>
+      
+       </form>
+    </div>
+    
+
+</body>
+</html>

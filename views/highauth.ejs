@@ -1,0 +1,308 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pie Chart Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    nav {
+	background-color: #eee;
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav li {
+	margin-right: 10px;
+}
+
+nav a {
+	color: rgb(4, 4, 77);
+	text-decoration: none;
+	padding: 5px;
+}
+
+nav a:hover {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+}
+
+header {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+canvas#myPieChart {
+  width: 1200px;
+  height: 10000px;
+  display: block;
+  position: fixed;
+}
+
+
+  </style>
+</head>
+<body>
+     <header >
+        <h1>Public Grievance Portal</h1><br>
+    </header> 
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/complog.html">Sign In</a></li>
+           <li><a href="/login.html">SignUp</a></li>
+        </ul>
+    </nav> 
+  <canvas id="myPieChart"></canvas>
+  <script>
+    const statusData = <%= JSON.stringify(a) %>;
+
+    const pieChart = new Chart('myPieChart', {
+      type: 'pie',
+      data: {
+        labels: ['Solved', 'Will Be Started Soon', 'Null', 'In Progress'],
+        datasets: [{
+          data: statusData,
+          backgroundColor: ['#4CAF50', '#2196F3', '#9E9E9E', '#FFC107']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+          callbacks: {
+            label: (tooltipItem, data) => {
+              const label = data.labels[tooltipItem.index];
+              const value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+              return `${label}: ${value}`;
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pie Chart Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    canvas {
+      max-width: 100%;
+      margin: 0 auto;
+    
+    }
+
+    nav {
+	background-color: #eee;
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav li {
+	margin-right: 10px;
+}
+
+nav a {
+	color: rgb(4, 4, 77);
+	text-decoration: none;
+	padding: 5px;
+}
+
+nav a:hover {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+}
+
+header {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+ 
+#police {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #police td, #police th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #police tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #police tr:hover {background-color: #ddd;}
+  
+  #police th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #055615;
+    color: white;
+}
+
+input[name=cid ]{
+    pointer-events: none;
+    border: none;
+  }
+
+
+  </style>
+</head>
+<body>
+    <header >
+        <h1>Public Grievance Portal</h1><br>
+    </header> 
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/complog.html">Sign In</a></li>
+           <li><a href="/login.html">SignUp</a></li>
+        </ul>
+    </nav> 
+  <div style="width: 100%;margin-top: 50px;">
+    <canvas id="myPieChart"></canvas>
+  </div>
+  
+  <script>
+    const statusData = <%= JSON.stringify(a) %>;
+    const statusLabels = ['Solved', 'Will Be Started Soon', 'New', 'In Progress'];
+    const colors = ['#4CAF50', '#2196F3', '#9E9E9E', '#FFC107'];
+    
+    const pieChart = new Chart('myPieChart', {
+      type: 'pie',
+      data: {
+        labels: statusLabels,
+        datasets: [{
+          data: statusData,
+          backgroundColor: colors,
+        }]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              const label = data.labels[tooltipItem.index];
+              const value = data.datasets[0].data[tooltipItem.index];
+              return label + ': ' + value;
+            }
+          }
+        },
+        plugins: {
+          datalabels: {
+            display: true,
+            color: '#fff',
+            backgroundColor: function(context) {
+              return colors[context.dataIndex];
+            },
+            borderRadius: 3,
+            font: {
+              weight: 'bold'
+            },
+            formatter: function(value, context) {
+              const label = statusLabels[context.dataIndex];
+              return label + ': ' + value;
+            },
+          }
+        }
+      }
+    });
+  </script>
+
+  
+<div class="box" style="margin-top: 50px;">
+   
+    <table width="100%" id="police">
+
+      <thead>
+        <th>Complaint Id</th>
+
+        <th>public id</th>
+        
+        <th>complaint</th>
+        <th>Assigned Officer Id</th>
+        
+        
+        
+        <!-- <th>Update status</th>
+        
+        <th>police id</th>
+        <th>Update</th>
+        <th>notification</th> -->
+        <th>View Detailed complaint info</th>
+        
+        
+      </thead>
+    <% for(var i=0;i<sampleData.length;i++){ %>
+        <div class="item">
+            
+              <tbody >
+                <tr>
+                  <!-- <form action="/police" method="post"> -->
+                    <form action="/high.html" method="post">
+                <!-- <td name="id"><%=sampleData[i].c_id %></td> -->
+                <td><input name="cid"  placeholder="com_id" size="2"  value= " <%= sampleData[i].c_id %>"></td>
+                <td><%= sampleData[i].public_id %></td>
+                <td><%= sampleData[i].highcomplaint %></td>
+    
+               
+                    <td><input name="pid"   size="2"  value= " <%= sampleData[i].asspol_id %>"></td>
+                    <!-- <td><%= sampleData[i].asspol_id %></td> -->
+                  
+               
+               
+               
+                
+                
+                
+                <td><button type="submit">View</button></td>
+               
+                
+              </form>
+              
+                
+              </tr>
+              </tbody>
+            
+        </div>
+        <% }  %>
+
+      </table>
+       
+
+   </div>
+
+  
+
+</body>
+</html>
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.one {
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  width: 550px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: scroll;
+  margin-left: 450px;
+  border: solid 5px rgb(4, 4, 77);
+  margin-bottom: 0;
+}
+  .message-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content {
+  background-color: #c6eef8;
+  border-radius: 18px;
+  padding: 10px;
+  margin-right: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.timestamp {
+  font-size: small;
+  color: #474545;
+}
+
+input[type="text"] {
+  border: none;
+
+  padding: 10px;
+  /* margin-right: 10px; */
+ 
+  margin-left: 470px;
+  flex: 1;
+  background-color: #eee;
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+ 
+}
+
+button[type="submit"] {
+  border: none;
+  background-color: rgb(4, 4, 77);
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  margin-left: 2px;
+  
+  
+  
+}
+
+nav {
+	background-color: #eee;
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav li {
+	margin-right: 10px;
+}
+
+nav a {
+	color: rgb(4, 4, 77);
+	text-decoration: none;
+	padding: 5px;
+}
+
+nav a:hover {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+}
+
+header {
+	background-color: rgb(4, 4, 77);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+</style>
+<body>
+    <div>
+      <header>
+        <h1>Public Grievance Portal</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/complog.html">Sign In</a></li>
+           <li><a href="/login.html">SignUp</a></li>
+        </ul>
+    </nav>
+    <form style="margin-left: 1200px;margin-top: 40px;" action="/hamail" method="post">
+      <h5>complaint id: <input name="cid" placeholder="com_id" size="2" value="<%= c %>"></h5>
+      <h5>Station Id:<input name="pid"   size="2"  value= " <%= p %>"></h5>
+      <!-- <td><input name="dept"   size="6"  value= " <%= dep %>"></td> -->
+      
+       <button type="submit">Send Email to Officer</button>
+  </form>
+
+  <form style="margin-left: 1200px;margin-top: 40px;" action="/hamailtopub" method="post">
+    <h5>complaint id: <input name="cid" placeholder="com_id" size="2" value="<%= c %>"></h5>
+     <button type="submit">Send Email to citizen</button>
+</form>
+        <form action="/chat.html" method="post">
+          <h5>complaint id: <input name="cid" placeholder="com_id" size="2" value="<%= c %>"></h5>
+          <div class="one">
+            <% if (Data && Data.length) { %>
+              <% for (var i = 0; i < Data.length; i++) { %>
+                <div class="message-container">
+                  <div class="message">
+                    <p class="content"><%= Data[i].content %></p>
+                    <p class="timestamp"><%= Data[i].timestamp %></p>
+                  </div>
+                </div>
+              <% } %>
+            <% } else { %>
+              <p>No data found.</p>
+            <% } %>
+          </div>
+          
+       
+      
+    <div class="sec">
+        <input name="msg" type="text" placeholder="Type Something..................">
+        <button onclick="myFunction1()" type="submit">send</button>
+    </div>
+  
+   </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+   <!-- <link rel="stylesheet" href="css/pol.css">  -->
+   <style>
+   
+    #public {
+     font-family: Arial, Helvetica, sans-serif;
+     border-collapse: collapse;
+     width: 100%;
+   }
+   
+   #public td, #public th {
+     border: 1px solid #ddd;
+     padding: 8px;
+   }
+   
+   #public tr:nth-child(even){background-color: #f2f2f2;}
+   
+   #public tr:hover {background-color: #ddd;}
+   
+   #public th {
+     padding-top: 12px;
+     padding-bottom: 12px;
+     text-align: left;
+     background-color: #055615;
+     color: white;
+   }
+ 
+     
+ header {
+   background-color: rgb(4, 4, 77);
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+ }
+ 
+ nav {
+   background-color: #eee;
+   padding: 10px;
+ }
+ 
+ nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: flex-end;
+ }
+ 
+ nav li {
+   margin-right: 10px;
+ }
+ 
+ nav a {
+   color: rgb(4, 4, 77);
+   text-decoration: none;
+   padding: 5px;
+ }
+ 
+ nav a:hover {
+   background-color: rgb(4, 4, 77);
+   color: #fff;
+ }
+ 
+ 
+  input[name=cid ]{
+    pointer-events: none;
+    border: none;
+  }
+
+  
+
+ 
+   </style>
+
+
+
+
+</head>
+
+<body>
+
+  <header>
+    <h1 >Public Grievance Portal</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/complog.html">Sign In</a></li>
+       <li><a href="/login.html">SignUp</a></li>
+    </ul>
+</nav>
+   <div class="box" id="heading">
+             <h1 style="text-align: center;margin-top: 50px;"><%= title %></h1>
+   </div>
+   
+   
+   <div class="box">
+   
+    <table width="100%" id="public">
+
+      <thead>
+        <th>c_id</th>
+        <th>complaint</th>
+        <th>Department</th>
+        <!-- <th>Station Email</th>
+        <th>station no</th> -->
+        <th>status</th>
+        <th>Chat with Officer</th>
+       
+        
+      </thead>
+    <% for(var i=0;i < sampleData.length;i++){  %>
+        <div class="item">
+            
+              <tbody >
+                <tr>
+                  <form action="/pubchat.html" method="post">
+                  <td><input name="cid"  placeholder="com_id" size="2"  value= " <%= sampleData[i].c_id %>"></td>
+                    <td ><%=sampleData[i].complaint %></td>
+                    <td ><%=sampleData[i].c_dept %></td>
+                    <!-- <td><%= sampleData[i].pol_email %></td>
+                    <td><%= sampleData[i].polst_no %></td> -->
+                    <td><%= sampleData[i].status %></td>
+                    
+                      <td><button type="submit">Chat</button></td>
+                    </form>
+                  
+                
+               
+              </tr>
+              </tbody>
+            
+        </div>
+        <% }  %>
+
+      </table>
+       
+
+   </div>
+   
+    
+    </body>
+  
